@@ -4,7 +4,7 @@ import { Section } from './types';
 export const PROFILE_NAME = "DR. REHAMAN MOHAMMED";
 export const TAGLINE = "MENTOR & COACH";
 export const HEADING = "Igniting Minds, Unleashing Potentials.";
-export const SUB_TAGLINE = "Helping students and young individuals who feel lost or overwhelmed find clarity, confidence, and direction through strategic mentorship and practical, life-shaping frameworks.";
+export const SUB_TAGLINE = "I help students and young individuals who feel confused or stuck find clarity, confidence, and direction through strategic mentorship and practical frameworks — by understanding their mindset silently and making everything feel simple and achievable.";
 export const PROFILE_IMAGE = "https://i.ibb.co/YBnY9r6D/rehman-sir-photo.jpg";
 
 export const SECTIONS: Section[] = [
