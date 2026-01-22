@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rehaman Mohammed | Master Mentor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+      :root {
+        --primary: #059669;
+        --secondary: #0891b2;
+        --bg: #ffffff;
+        --text-main: #111827;
+        --text-sub: #4b5563;
+      }
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background-color: var(--bg);
+        color: var(--text-main);
+        overflow-x: hidden;
+      }
+      .font-display { font-family: 'Space Grotesk', sans-serif; }
+      
+      .neural-mesh {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        background: 
+          radial-gradient(circle at 0% 0%, rgba(16, 185, 129, 0.03) 0%, transparent 50%),
+          radial-gradient(circle at 100% 100%, rgba(6, 182, 212, 0.03) 0%, transparent 50%);
+      }
+      
+      @keyframes breathing-glow {
+        0%, 100% { box-shadow: 0 0 20px rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.3); }
+        50% { box-shadow: 0 0 40px rgba(16, 185, 129, 0.3); border-color: rgba(16, 185, 129, 0.6); }
+      }
+      .profile-glow {
+        animation: breathing-glow 4s ease-in-out infinite;
+      }
+
+      ::-webkit-scrollbar { width: 4px; }
+      ::-webkit-scrollbar-track { background: #f9fafb; }
+      ::-webkit-scrollbar-thumb { background: #e5e7eb; border-radius: 10px; }
+      ::-webkit-scrollbar-thumb:hover { background: var(--primary); }
+    </style>
+
+<link rel="stylesheet" href="/index.css">
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "framer-motion": "https://esm.sh/framer-motion@11.11.11?external=react,react-dom",
+    "@google/genai": "https://esm.sh/@google/genai@1.3.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/Rehamanunplugged-/assets/index-CUsuSf1-.js"></script>
+</head>
+  <body>
+    <div class="neural-mesh"></div>
+    <div id="root"></div>
+</body>
+</html>
