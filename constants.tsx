@@ -21,19 +21,13 @@ export const SECTIONS: Section[] = [
     ]
   },
   {
-    title: "PROGRAMS",
-    description: "Accelerator Track",
+    title: "MY EXPERT SERVICES",
     type: 'outlined',
     items: [
-      { label: "Elite Mentorship Program", sublabel: "Next-Gen Scaling", url: "#" }
-    ]
-  },
-  {
-    title: "COACHING",
-    type: 'outlined',
-    items: [
-      { label: "1-ON-1 SESSIONS", sublabel: "Strategic Audit", url: "#" },
-      { label: "MASTERMIND GROUP", sublabel: "Weekly Expansion", url: "#" }
+      { label: "Vocabulary Building", url: "#" },
+      { label: "Emotional Intelligence", url: "#" },
+      { label: "Mental Health Awareness", url: "#" },
+      { label: "Profile / Brand Building", url: "#" }
     ]
   },
 ];
