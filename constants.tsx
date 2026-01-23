@@ -9,11 +9,15 @@ export const PROFILE_IMAGE = "https://i.ibb.co/YBnY9r6D/rehman-sir-photo.jpg";
 
 export const SECTIONS: Section[] = [
   {
-    title: "FEATURED BOOK",
-    description: "Latest Release",
+    title: "CONNECT WITH ME",
+    description: "Follow the Journey",
     type: 'gradient',
-    items: [
-      { label: "The Soul's Canvas", sublabel: "📖 Available on Amazon", url: "https://amzn.in/d/b7otYm5" }
+    items: [],
+    socials: [
+      { platform: 'instagram', url: "https://www.instagram.com/mohammed.rehaman?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==", handle: "@mohammed.rehaman" },
+      { platform: 'youtube', url: "https://www.youtube.com/@RehamanMohammed", handle: "@RehamanMohammed" },
+      { platform: 'twitter', url: "https://twitter.com/rehmansrk", handle: "@rehmansrk" },
+      { platform: 'linkedin', url: "https://linkedin.com/in/rehamanmohammed", handle: "Rehaman Mohammed" }
     ]
   },
   {
@@ -32,16 +36,4 @@ export const SECTIONS: Section[] = [
       { label: "MASTERMIND GROUP", sublabel: "Weekly Expansion", url: "#" }
     ]
   },
-  {
-    title: "CONNECT",
-    description: "Follow the Journey",
-    type: 'outlined',
-    items: [],
-    socials: [
-      { platform: 'instagram', url: "https://www.instagram.com/mohammed.rehaman?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==", handle: "@mohammed.rehaman" },
-      { platform: 'youtube', url: "https://www.youtube.com/@RehamanMohammed", handle: "@RehamanMohammed" },
-      { platform: 'twitter', url: "https://twitter.com/rehmansrk", handle: "@rehmansrk" },
-      { platform: 'linkedin', url: "https://linkedin.com/in/rehamanmohammed", handle: "Rehaman Mohammed" }
-    ]
-  }
 ];

@@ -62,8 +62,11 @@ const App: React.FC = () => {
         {/* Footer */}
         <footer className="mt-20 text-center">
           <div className="h-[1px] w-24 bg-gradient-to-r from-transparent via-emerald-100 to-transparent mx-auto mb-8"></div>
-          <p className="text-[8px] font-black tracking-[0.7em] text-gray-300 uppercase">
-            © {new Date().getFullYear()} Rehaman Mohammed • Building Legacies
+          <p className="text-sm font-semibold text-gray-600 mb-1">
+            Let's start growing together:
+          </p>
+          <p className="text-xs text-emerald-600 font-medium">
+            I am just a ping away!
           </p>
         </footer>
       </div>

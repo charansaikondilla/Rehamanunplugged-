@@ -60,30 +60,49 @@ const Card: React.FC<CardProps> = ({ section }) => {
 
         {section.socials && (
           <div className={`${section.items.length > 0 ? 'mt-10 border-t pt-6' : ''} ${isGradient ? 'border-white/10' : 'border-gray-50'}`}>
-             <div className="grid grid-cols-2 gap-4">
-              {section.socials.map((social, idx) => (
-                <a 
-                  key={idx} 
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`flex items-center gap-3 p-4 rounded-2xl transition-all hover:scale-105 group/social ${isGradient ? 'bg-white/10 hover:bg-white/20' : 'bg-gray-50 hover:bg-emerald-50 border border-gray-100'}`}
-                >
-                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center transition-all ${isGradient ? 'bg-white/20 text-white' : 'bg-white text-emerald-600 group-hover/social:bg-emerald-600 group-hover/social:text-white'}`}>
-                    <i className={`fa-brands fa-${social.platform} text-lg`}></i>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className={`text-[10px] font-bold uppercase tracking-wider ${isGradient ? 'text-white/50' : 'text-gray-400'}`}>
-                      {social.platform}
-                    </p>
-                    <p className={`text-[11px] font-semibold truncate ${isGradient ? 'text-white' : 'text-gray-700'}`}>
-                      {social.handle}
-                    </p>
-                  </div>
-                  <i className={`fa-solid fa-arrow-up-right text-[10px] transition-all opacity-0 group-hover/social:opacity-100 ${isGradient ? 'text-white' : 'text-emerald-600'}`}></i>
-                </a>
-              ))}
-            </div>
+            {isGradient ? (
+              /* Icons-only horizontal layout for gradient cards */
+              <div className="flex justify-center items-center gap-5">
+                {section.socials.map((social, idx) => (
+                  <a 
+                    key={idx} 
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={social.platform}
+                    className="w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 bg-white/20 hover:bg-white/30 text-white"
+                  >
+                    <i className={`fa-brands fa-${social.platform} text-2xl`}></i>
+                  </a>
+                ))}
+              </div>
+            ) : (
+              /* Grid layout with details for outlined cards */
+              <div className="grid grid-cols-2 gap-4">
+                {section.socials.map((social, idx) => (
+                  <a 
+                    key={idx} 
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 p-4 rounded-2xl transition-all hover:scale-105 group/social bg-gray-50 hover:bg-emerald-50 border border-gray-100"
+                  >
+                    <div className="w-10 h-10 rounded-xl flex items-center justify-center transition-all bg-white text-emerald-600 group-hover/social:bg-emerald-600 group-hover/social:text-white">
+                      <i className={`fa-brands fa-${social.platform} text-lg`}></i>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-[10px] font-bold uppercase tracking-wider text-gray-400">
+                        {social.platform}
+                      </p>
+                      <p className="text-[11px] font-semibold truncate text-gray-700">
+                        {social.handle}
+                      </p>
+                    </div>
+                    <i className="fa-solid fa-arrow-up-right text-[10px] transition-all opacity-0 group-hover/social:opacity-100 text-emerald-600"></i>
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
         )}
       </div>
