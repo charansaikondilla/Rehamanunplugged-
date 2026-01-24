@@ -33,27 +33,43 @@ const Card: React.FC<CardProps> = ({ section }) => {
         </div>
 
         {section.items.length > 0 && (
-          <div className="space-y-5">
+          <div className={section.title === "MY EXPERT SERVICES" ? "grid grid-cols-2 gap-3" : "space-y-5"}>
             {section.items.map((item, idx) => (
-              <a 
-                key={idx} 
-                href={item.url}
-                className={`block group/item transition-all py-1`}
-              >
-                <div className="flex justify-between items-center">
-                  <div>
-                    <span className={`block font-bold text-sm tracking-tight transition-colors uppercase ${isGradient ? 'group-hover/item:text-emerald-200' : 'group-hover/item:text-emerald-600'}`}>
+              section.title === "MY EXPERT SERVICES" ? (
+                <div 
+                  key={idx} 
+                  className="group/item p-4 rounded-2xl bg-gray-50 border border-gray-100 hover:bg-emerald-50 hover:border-emerald-200 transition-all duration-300"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-white border border-gray-100 flex items-center justify-center group-hover/item:bg-emerald-600 group-hover/item:border-emerald-600 transition-all duration-300">
+                      <i className="fa-solid fa-check text-emerald-600 text-sm group-hover/item:text-white transition-colors"></i>
+                    </div>
+                    <span className="font-semibold text-sm text-gray-700 group-hover/item:text-emerald-700 transition-colors">
                       {item.label}
                     </span>
-                    {item.sublabel && (
-                      <span className={`block text-[9px] mt-1 uppercase tracking-wider font-semibold opacity-40 ${isGradient ? 'text-white' : 'text-gray-500'}`}>
-                        {item.sublabel}
-                      </span>
-                    )}
                   </div>
-                  <i className={`fa-solid fa-chevron-right text-[8px] transition-all ${isGradient ? 'text-white opacity-20' : 'text-emerald-500 opacity-20'} group-hover/item:opacity-100 group-hover/item:translate-x-1`}></i>
                 </div>
-              </a>
+              ) : (
+                <a 
+                  key={idx} 
+                  href={item.url}
+                  className={`block group/item transition-all py-1`}
+                >
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <span className={`block font-bold text-sm tracking-tight transition-colors uppercase ${isGradient ? 'group-hover/item:text-emerald-200' : 'group-hover/item:text-emerald-600'}`}>
+                        {item.label}
+                      </span>
+                      {item.sublabel && (
+                        <span className={`block text-[9px] mt-1 uppercase tracking-wider font-semibold opacity-40 ${isGradient ? 'text-white' : 'text-gray-500'}`}>
+                          {item.sublabel}
+                        </span>
+                      )}
+                    </div>
+                    <i className={`fa-solid fa-chevron-right text-[8px] transition-all ${isGradient ? 'text-white opacity-20' : 'text-emerald-500 opacity-20'} group-hover/item:opacity-100 group-hover/item:translate-x-1`}></i>
+                  </div>
+                </a>
+              )
             ))}
           </div>
         )}
