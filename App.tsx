@@ -6,8 +6,8 @@ import FloatingWhatsApp from './components/FloatingWhatsApp';
 
 const App: React.FC = () => {
   return (
-    <diFloatingWhatsApp />
-      <v className="h-screen md:min-h-screen relative overflow-hidden md:overflow-auto md:pb-20 bg-white">
+    <div className="h-screen md:min-h-screen relative overflow-hidden md:overflow-auto md:pb-20 bg-white">
+      <FloatingWhatsApp />
       <div className="container max-w-xl mx-auto px-4 md:px-6 pt-4 md:pt-16 relative z-10 h-full md:h-auto flex flex-col md:block">
         
         {/* Header Section */}
