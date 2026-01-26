@@ -5,7 +5,7 @@ import Card from './components/Card';
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white pb-24 md:pb-0">
+    <div className="min-h-screen bg-white">
       <div className="container max-w-xl mx-auto px-4 md:px-6 pt-4 md:pt-16">
         
         {/* Header Section */}
@@ -53,41 +53,60 @@ const App: React.FC = () => {
         </header>
 
         {/* Bento Grid Main Content */}
-        <main className="space-y-2 md:space-y-4 mb-6 md:mb-10">
+        <main className="space-y-2 md:space-y-4">
           {SECTIONS.map((section, idx) => (
             <Card key={idx} section={section} />
           ))}
-        </main>
 
-        {/* Desktop Footer */}
-        <footer className="hidden md:block mt-20 text-center pb-10">
-          <div className="h-[1px] w-24 bg-gradient-to-r from-transparent via-emerald-200 to-transparent mx-auto mb-6"></div>
-          <p className="text-sm font-semibold text-gray-600 mb-2">Let's connect</p>
+          {/* WhatsApp CTA Card - No Gap */}
           <a 
             href="https://wa.me/918801279471"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-8 py-3 bg-gradient-to-r from-emerald-500 to-emerald-700 text-white rounded-full font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
+            className="w-full rounded-2xl md:rounded-[2rem] overflow-hidden transition-all duration-500 hover:translate-y-[-4px] shadow-sm hover:shadow-xl group border bg-gradient-to-br from-emerald-600 to-emerald-800 text-white border-emerald-500 block"
           >
-            <i className="fa-brands fa-whatsapp mr-2"></i>
-            I am just a ping away!
-          </a>
-          <p className="text-xs text-gray-400 mt-6">© 2025 Dr. Rehaman Mohammed</p>
-        </footer>
-      </div>
+            <div className="p-4 md:p-8">
+              <div className="flex justify-between items-center mb-3 md:mb-6">
+                <div>
+                  <h3 className="font-display font-black text-sm md:text-xl tracking-tight uppercase text-white">
+                    Connect With Me
+                  </h3>
+                  <p className="text-[9px] md:text-[10px] font-black tracking-widest opacity-60 uppercase text-emerald-50">
+                    Quick Response
+                  </p>
+                </div>
+                <div className="hidden md:flex items-center justify-center w-10 h-10 rounded-2xl transition-all duration-300 bg-white/20 group-hover:rotate-45">
+                  <i className="fa-solid fa-arrow-up-right text-xs text-white"></i>
+                </div>
+              </div>
 
-      {/* Mobile Sticky Footer Button */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-4 py-3 shadow-lg">
-        <a 
-          href="https://wa.me/918801279471"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block w-full px-6 py-3 bg-gradient-to-r from-emerald-500 to-emerald-700 text-white rounded-lg font-semibold text-center hover:shadow-lg transition-all duration-300 active:scale-95"
-        >
-          <i className="fa-brands fa-whatsapp mr-2"></i>
-          I am just a ping away!
-        </a>
-        <p className="text-center text-[9px] text-gray-400 mt-2">⚡ Quick response guaranteed</p>
+              <div className="space-y-3">
+                <div className="flex items-center gap-3 md:gap-4">
+                  <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg md:rounded-xl flex items-center justify-center bg-white/20 group-hover:bg-white/30 transition-all flex-shrink-0">
+                    <i className="fa-brands fa-whatsapp text-xl md:text-3xl text-white"></i>
+                  </div>
+                  <div>
+                    <span className="block font-bold text-sm md:text-base text-white">
+                      I am just a ping away!
+                    </span>
+                    <span className="block text-[10px] md:text-xs text-emerald-100 opacity-90">
+                      Message me on WhatsApp
+                    </span>
+                  </div>
+                </div>
+                <p className="text-[9px] md:text-xs text-emerald-50 opacity-85 pl-15 md:pl-16">
+                  ⚡ Available 24/7 • Quick response guaranteed
+                </p>
+              </div>
+            </div>
+          </a>
+        </main>
+
+        {/* Footer */}
+        <footer className="mt-8 md:mt-12 text-center pb-6 md:pb-10">
+          <div className="h-[1px] w-24 bg-gradient-to-r from-transparent via-emerald-200 to-transparent mx-auto mb-4"></div>
+          <p className="text-[9px] md:text-xs text-gray-400">© 2025 Dr. Rehaman Mohammed</p>
+        </footer>
       </div>
     </div>
   );
