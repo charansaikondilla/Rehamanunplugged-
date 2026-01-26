@@ -5,8 +5,8 @@ import Card from './components/Card';
 
 const App: React.FC = () => {
   return (
-    <div className="h-screen md:min-h-screen relative overflow-hidden md:overflow-auto md:pb-20 bg-white">
-      <div className="container max-w-xl mx-auto px-4 md:px-6 pt-4 md:pt-16 relative z-10 h-full md:h-auto flex flex-col md:block">
+    <div className="min-h-screen bg-white pb-24 md:pb-0">
+      <div className="container max-w-xl mx-auto px-4 md:px-6 pt-4 md:pt-16">
         
         {/* Header Section */}
         <header className="text-center mb-4 md:mb-16 flex-shrink-0">
@@ -53,49 +53,41 @@ const App: React.FC = () => {
         </header>
 
         {/* Bento Grid Main Content */}
-        <main className="space-y-2 md:space-y-4">
+        <main className="space-y-2 md:space-y-4 mb-6 md:mb-10">
           {SECTIONS.map((section, idx) => (
             <Card key={idx} section={section} />
           ))}
         </main>
 
-        {/* Footer */}
-        <footer className="mt-12 md:mt-20 pb-6 md:pb-12 text-center">
-          <div className="max-w-2xl mx-auto px-3 md:px-6">
-            {/* Divider */}
-            <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-emerald-300 to-transparent mx-auto mb-8 md:mb-10"></div>
-            
-            {/* WhatsApp CTA Button - Mobile Optimized */}
-            <a 
-              href="https://wa.me/918801279471"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block w-full md:w-auto px-4 md:px-12 py-4 md:py-5 bg-gradient-to-r from-emerald-500 to-emerald-700 text-white rounded-xl md:rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105 mb-6"
-            >
-              <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4">
-                <i className="fa-brands fa-whatsapp text-3xl md:text-4xl"></i>
-                <div className="flex flex-col items-center md:items-start">
-                  <span className="font-bold text-base md:text-lg block">
-                    I am just a ping away!
-                  </span>
-                  <span className="text-xs md:text-sm text-emerald-50 opacity-90 block">
-                    Message on WhatsApp
-                  </span>
-                </div>
-              </div>
-            </a>
-            
-            {/* Footer Info */}
-            <div className="mt-4 pt-4 border-t border-gray-100">
-              <p className="text-[10px] md:text-xs text-gray-500 font-medium mb-1">
-                ⚡ Quick Response • Available 24/7 ⚡
-              </p>
-              <p className="text-[9px] md:text-xs text-gray-400">
-                © 2025 Dr. Rehaman Mohammed
-              </p>
-            </div>
-          </div>
+        {/* Desktop Footer */}
+        <footer className="hidden md:block mt-20 text-center pb-10">
+          <div className="h-[1px] w-24 bg-gradient-to-r from-transparent via-emerald-200 to-transparent mx-auto mb-6"></div>
+          <p className="text-sm font-semibold text-gray-600 mb-2">Let's connect</p>
+          <a 
+            href="https://wa.me/918801279471"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-8 py-3 bg-gradient-to-r from-emerald-500 to-emerald-700 text-white rounded-full font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
+          >
+            <i className="fa-brands fa-whatsapp mr-2"></i>
+            I am just a ping away!
+          </a>
+          <p className="text-xs text-gray-400 mt-6">© 2025 Dr. Rehaman Mohammed</p>
         </footer>
+      </div>
+
+      {/* Mobile Sticky Footer Button */}
+      <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-4 py-3 shadow-lg">
+        <a 
+          href="https://wa.me/918801279471"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block w-full px-6 py-3 bg-gradient-to-r from-emerald-500 to-emerald-700 text-white rounded-lg font-semibold text-center hover:shadow-lg transition-all duration-300 active:scale-95"
+        >
+          <i className="fa-brands fa-whatsapp mr-2"></i>
+          I am just a ping away!
+        </a>
+        <p className="text-center text-[9px] text-gray-400 mt-2">⚡ Quick response guaranteed</p>
       </div>
     </div>
   );
