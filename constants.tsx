@@ -14,6 +14,7 @@ export const SECTIONS: Section[] = [
     type: 'gradient',
     items: [],
     socials: [
+      { platform: 'whatsapp', url: "https://wa.me/918801279471", handle: "Chat on WhatsApp" },
       { platform: 'instagram', url: "https://www.instagram.com/mohammed.rehaman?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==", handle: "@mohammed.rehaman" },
       { platform: 'youtube', url: "https://www.youtube.com/@RehamanMohammed", handle: "@RehamanMohammed" },
       { platform: 'twitter', url: "https://twitter.com/rehmansrk", handle: "@rehmansrk" },
