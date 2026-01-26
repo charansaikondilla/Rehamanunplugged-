@@ -60,42 +60,38 @@ const App: React.FC = () => {
         </main>
 
         {/* Footer */}
-        <footer className="mt-20 md:mt-28 pb-12 md:pb-16 text-center">
-          <div className="max-w-4xl mx-auto px-4 md:px-6">
+        <footer className="mt-12 md:mt-20 pb-6 md:pb-12 text-center">
+          <div className="max-w-2xl mx-auto px-3 md:px-6">
             {/* Divider */}
-            <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-emerald-300 to-transparent mx-auto mb-12"></div>
+            <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-emerald-300 to-transparent mx-auto mb-8 md:mb-10"></div>
             
-            {/* Horizontal CTA Button */}
+            {/* WhatsApp CTA Button - Mobile Optimized */}
             <a 
               href="https://wa.me/918801279471"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full md:w-auto inline-flex items-center justify-center gap-4 px-8 md:px-16 py-5 md:py-6 bg-gradient-to-r from-emerald-500 via-emerald-600 to-emerald-700 text-white rounded-2xl md:rounded-full shadow-xl hover:shadow-2xl hover:shadow-emerald-500/60 transition-all duration-300 group relative overflow-hidden mb-10 hover:scale-105"
+              className="inline-block w-full md:w-auto px-4 md:px-12 py-4 md:py-5 bg-gradient-to-r from-emerald-500 to-emerald-700 text-white rounded-xl md:rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105 mb-6"
             >
-              {/* Shine Effect */}
-              <div className="absolute inset-0 bg-white/15 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              
-              {/* WhatsApp Icon */}
-              <i className="fa-brands fa-whatsapp text-3xl md:text-4xl relative z-10"></i>
-              
-              {/* Text Content */}
-              <div className="relative z-10 flex flex-col items-start">
-                <span className="block font-black text-base md:text-xl leading-tight">
-                  I am just a ping away!
-                </span>
-                <span className="block text-xs md:text-sm font-medium text-emerald-50 opacity-85 mt-0.5">
-                  Message me on WhatsApp for quick response
-                </span>
+              <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4">
+                <i className="fa-brands fa-whatsapp text-3xl md:text-4xl"></i>
+                <div className="flex flex-col items-center md:items-start">
+                  <span className="font-bold text-base md:text-lg block">
+                    I am just a ping away!
+                  </span>
+                  <span className="text-xs md:text-sm text-emerald-50 opacity-90 block">
+                    Message on WhatsApp
+                  </span>
+                </div>
               </div>
             </a>
             
             {/* Footer Info */}
-            <div className="mt-8 border-t border-gray-100 pt-6">
-              <p className="text-xs md:text-sm text-gray-500 font-medium mb-2">
-                ⚡ Quick Response Guaranteed • Available 24/7 ⚡
+            <div className="mt-4 pt-4 border-t border-gray-100">
+              <p className="text-[10px] md:text-xs text-gray-500 font-medium mb-1">
+                ⚡ Quick Response • Available 24/7 ⚡
               </p>
-              <p className="text-xs text-gray-400">
-                © 2025 Dr. Rehaman Mohammed. All rights reserved.
+              <p className="text-[9px] md:text-xs text-gray-400">
+                © 2025 Dr. Rehaman Mohammed
               </p>
             </div>
           </div>
