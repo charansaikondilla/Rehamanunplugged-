@@ -65,38 +65,19 @@ const App: React.FC = () => {
             rel="noopener noreferrer"
             className="w-full rounded-2xl md:rounded-[2rem] overflow-hidden transition-all duration-500 hover:translate-y-[-4px] shadow-sm hover:shadow-xl group border bg-gradient-to-br from-emerald-600 to-emerald-800 text-white border-emerald-500 block"
           >
-            <div className="p-4 md:p-8">
-              <div className="flex justify-between items-center mb-3 md:mb-6">
-                <div>
-                  <h3 className="font-display font-black text-sm md:text-xl tracking-tight uppercase text-white">
-                    Connect With Me
-                  </h3>
-                  <p className="text-[9px] md:text-[10px] font-black tracking-widest opacity-60 uppercase text-emerald-50">
-                    Quick Response
-                  </p>
+            <div className="p-6 md:p-8">
+              <div className="flex items-center gap-4 md:gap-5">
+                <div className="w-14 h-14 md:w-16 md:h-16 rounded-lg md:rounded-xl flex items-center justify-center bg-white/20 group-hover:bg-white/30 transition-all flex-shrink-0">
+                  <i className="fa-brands fa-whatsapp text-3xl md:text-4xl text-white"></i>
                 </div>
-                <div className="hidden md:flex items-center justify-center w-10 h-10 rounded-2xl transition-all duration-300 bg-white/20 group-hover:rotate-45">
-                  <i className="fa-solid fa-arrow-up-right text-xs text-white"></i>
+                <div className="flex-1">
+                  <span className="block font-bold text-base md:text-lg text-white">
+                    I am just a ping away!
+                  </span>
+                  <span className="block text-xs md:text-sm text-emerald-100 opacity-90 mt-1">
+                    ⚡ Available 24/7 • Quick response guaranteed
+                  </span>
                 </div>
-              </div>
-
-              <div className="space-y-3">
-                <div className="flex items-center gap-3 md:gap-4">
-                  <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg md:rounded-xl flex items-center justify-center bg-white/20 group-hover:bg-white/30 transition-all flex-shrink-0">
-                    <i className="fa-brands fa-whatsapp text-xl md:text-3xl text-white"></i>
-                  </div>
-                  <div>
-                    <span className="block font-bold text-sm md:text-base text-white">
-                      I am just a ping away!
-                    </span>
-                    <span className="block text-[10px] md:text-xs text-emerald-100 opacity-90">
-                      Message me on WhatsApp
-                    </span>
-                  </div>
-                </div>
-                <p className="text-[9px] md:text-xs text-emerald-50 opacity-85 pl-15 md:pl-16">
-                  ⚡ Available 24/7 • Quick response guaranteed
-                </p>
               </div>
             </div>
           </a>
