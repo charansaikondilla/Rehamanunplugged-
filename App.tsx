@@ -2,10 +2,12 @@
 import React from 'react';
 import { PROFILE_NAME, TAGLINE, HEADING, SUB_TAGLINE, PROFILE_IMAGE, SECTIONS } from './constants';
 import Card from './components/Card';
+import FloatingWhatsApp from './components/FloatingWhatsApp';
 
 const App: React.FC = () => {
   return (
-    <div className="h-screen md:min-h-screen relative overflow-hidden md:overflow-auto md:pb-20 bg-white">
+    <diFloatingWhatsApp />
+      <v className="h-screen md:min-h-screen relative overflow-hidden md:overflow-auto md:pb-20 bg-white">
       <div className="container max-w-xl mx-auto px-4 md:px-6 pt-4 md:pt-16 relative z-10 h-full md:h-auto flex flex-col md:block">
         
         {/* Header Section */}
