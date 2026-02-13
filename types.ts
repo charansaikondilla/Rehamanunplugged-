@@ -20,6 +20,14 @@ export interface SocialLink {
   handle: string;
 }
 
+export interface Testimonial {
+  name: string;
+  title: string;
+  subtitle: string;
+  quote: string;
+  image: string;
+}
+
 export interface Message {
   role: 'user' | 'model';
   text: string;

@@ -1,7 +1,8 @@
 
 import React from 'react';
-import { PROFILE_NAME, TAGLINE, HEADING, SUB_TAGLINE, PROFILE_IMAGE, SECTIONS } from './constants';
+import { PROFILE_NAME, TAGLINE, HEADING, SUB_TAGLINE, PROFILE_IMAGE, SECTIONS, TESTIMONIALS } from './constants';
 import Card from './components/Card';
+import Testimonials from './components/Testimonials';
 
 const App: React.FC = () => {
   return (
@@ -58,29 +59,10 @@ const App: React.FC = () => {
             <Card key={idx} section={section} />
           ))}
 
-          {/* WhatsApp CTA Card - No Gap */}
-          <a 
-            href="https://wa.me/918801279471"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full rounded-2xl md:rounded-[2rem] overflow-hidden transition-all duration-500 hover:translate-y-[-4px] shadow-sm hover:shadow-xl group border bg-gradient-to-br from-emerald-600 to-emerald-800 text-white border-emerald-500 block"
-          >
-            <div className="p-6 md:p-8">
-              <div className="flex items-center gap-4 md:gap-5">
-                <div className="w-14 h-14 md:w-16 md:h-16 rounded-lg md:rounded-xl flex items-center justify-center bg-white/20 group-hover:bg-white/30 transition-all flex-shrink-0">
-                  <i className="fa-brands fa-whatsapp text-3xl md:text-4xl text-white"></i>
-                </div>
-                <div className="flex-1">
-                  <span className="block font-bold text-base md:text-lg text-white">
-                    I am just a ping away!
-                  </span>
-                  <span className="block text-xs md:text-sm text-emerald-100 opacity-90 mt-1">
-                    ⚡ Available 24/7 • Quick response guaranteed
-                  </span>
-                </div>
-              </div>
-            </div>
-          </a>
+          {/* Testimonials Section */}
+          <div className="mt-8 md:mt-12 pt-8 md:pt-12 w-full max-w-4xl mx-auto">
+            <Testimonials testimonials={TESTIMONIALS} />
+          </div>
         </main>
 
         {/* Footer */}

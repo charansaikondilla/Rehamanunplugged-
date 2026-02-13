@@ -1,5 +1,5 @@
 
-import { Section } from './types';
+import { Section, Testimonial } from './types';
 
 export const PROFILE_NAME = "DR. REHAMAN MOHAMMED";
 export const TAGLINE = "MENTOR & COACH";
@@ -31,4 +31,28 @@ export const SECTIONS: Section[] = [
       { label: "Profile / Brand Building", url: "#" }
     ]
   },
+];
+
+export const TESTIMONIALS: Testimonial[] = [
+  {
+    name: "Sai Marthand",
+    title: "Director – Little Hearts (Telugu)",
+    subtitle: "Media & Entertainment",
+    quote: "Rehaman Sir has a rare ability — he sees strengths you don't even know exist. He never pushes loudly. He nudges silently. Before you realise it, you are operating at a level you once thought was impossible. That clarity changed my creative journey.",
+    image: "/testimonials/saimarthad.png"
+  },
+  {
+    name: "Navya Darba",
+    title: "Influencer – United States",
+    subtitle: "Content Creator",
+    quote: "Whenever I faced confusion or inner conflict, one conversation with Rehaman Sir would realign everything. He doesn't just advice — he makes you see clearly. Every discussion left me stronger, calmer, and more decisive.",
+    image: "/testimonials/navya darba.png"
+  },
+  {
+    name: "Mr. Haneuf",
+    title: "Senior Manager – Amazon",
+    subtitle: "Technology & Leadership",
+    quote: "I was a complete introvert, filled with fear and hesitation. Rehaman Sir's mentoring didn't just improve my communication — it rebuilt my confidence. He transformed my mindset and helped me grow into a leader.",
+    image: "/testimonials/Mr.haneuf.png"
+  }
 ];
